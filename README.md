@@ -301,3 +301,12 @@ https://github.com/lurrelo/Reto-Intercorp
 https://github.com/FiorellaEffio/intercorp-reto
 
 faltan los de esen
+
+
+------
+
+La última etapa de la aplicación al cargo de Sénior Technology Manager en IVisa es de demostrar tus habilidades haciendo codigo front end. En el enlace encontraras todo lo que necesitas para el challenge. El objetivo es hacer esta pequeña sección de My Wallet donde el usuario pueda adjuntar mas tarjetas, hacer la que quiera default y eliminar la que no quiera tener registrada. No es necesario que tenga header y footer (sera un plus) lo que nos importa es el modulo de cards y que este sea desarrollado en Vue.js.
+
+https://drive.google.com/open?id=16nVLgjqVXn3AOOiVkTsSokzlSidvU8Up  
+
+Me gustaria que la entrega este hecha en Github or Gitlab y la maqueta la podamos ver en vivo cargada en tu propio servidor. Del github la evaluacion la hace el CTO del La maqueta y sus funcionalidades nosotros.
