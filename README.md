@@ -84,4 +84,77 @@ All of this should be built in python/django. Use any extra libraries you think 
 
 Finally, deploy your code to a hosting service of your choice. ***** is built entirely on AWS, so bonus points will be awarded for use of AWS.
  
+ ----------
  
+ # Welcome to XXXXXXXXX.com
+
+Please complete this guide by uploading your work to your own gitlab repository 
+and doing a MR to this one. The branch must contain the readme file with the
+responses using markdown and referencing to folders or files
+that you need in order to solve the test.
+
+
+## 1
+
+We encourage documentation and investigation in order to have agile development.
+We support RTFM and LMGTFY:
+
+>___Create a file telling us when you last used RTFM and LMGTFY,
+the OS you use and the languages you master___
+
+**Response:** *You can see it [here](./01)*
+
+## 2
+
+Automation helps us to avoid human errors. Some of our systems use CI.
+
+>___Write a program in the language of your choice that can accomplish this.
+You can use Pseudocode.___
+>___If you are not familiar with writing these programs, you can explain the
+most representative concepts.___
+
+**Response:** *You can see it [here](./02)*
+
+## 3
+
+A developer's portfolio is important to us. We ask you to upload 1 or 2 
+projects of your authorship.
+
+>___If you do not want to share the code, you can just paste some of it.___
+
+**Response:** *You can see it [here](./03)*
+
+## 4
+
+>___Please, write a code or pseudocode that solves the problem in which I have a 
+collection of numbers in ascending order. You need to find the matching pair 
+that it is equal to a sum that its also given to you. If you make any 
+assumption, let us know.___
+
+>___Example:___
+* [2,3,6,7]  sum = 9  - OK, matching pair (3,6)
+* [1,3,3,7]  sum = 9  - No
+
+* Consider recibe 1 000 000 numbers
+
+**Response:** *You can see it [here](./04)*
+
+## 5
+
+"The message is in spanish."
+
+>___4573746520657320656c20fa6c74696d6f207061736f2c20706f72206661766f722c20616772
+6567616d6520616c2068616e676f75743a200d0a0d0a226d617274696e406d656e646f7a6164656c
+736f6c61722e636f6d22207061726120736162657220717565206c6c656761737465206120657374
+612070617274652e0d0a0d0a477261636961732c20792065737065726f20766572746520706f7220
+617175ed212e___
+
+
+>___U2kgbGxlZ2FzIGhhc3RhIGVzdGEgcGFydGUsIHBvciBmYXZvciwgY29tZW50YW1lbG8gY29uIHVu
+IG1lbnNhamUu___
+
+**Response:** *You can see it [here](./05)*
+
+
+# All answers must be inside a docker image and the answer will be tested with a running container. Add lint and at least 01 unit test
+
