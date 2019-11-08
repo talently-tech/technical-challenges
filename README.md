@@ -288,3 +288,16 @@ Write your code in the existing files to make the tests pass. Look for the TODO 
 Submit your code on the Devskiller platform. Make sure the tests pass there, too, before submitting.
 
 ## Good Luck!
+
+
+------
+
+## Intercorp retos
+
+https://github.com/chrisocares/IntercorpRetail
+
+https://github.com/lurrelo/Reto-Intercorp
+
+https://github.com/FiorellaEffio/intercorp-reto
+
+faltan los de esen
