@@ -158,3 +158,133 @@ IG1lbnNhamUu___
 
 # All answers must be inside a docker image and the answer will be tested with a running container. Add lint and at least 01 unit test
 
+------------------
+
+
+# Running Tracking Server
+
+## Introduction
+Your company is building a social sports app that tracks the time and the distance of its users. They need your team to develop the backend application that can do the following:
+1: Update user information
+2: Get user information
+3: Return the top N users sorted by a certain attribute
+4: Return the top N fastest users
+5: Find a running partner
+6: Add basic authentication
+
+1 - **Update user information**
+URL `[POST, PATCH] /users/<username>`
+Example: `POST /users/john`
+This is an example of an update that the server needs to handle:
+```json
+{
+  "ts": 1552475073,
+  "distance": 5560,
+  "time":  133910
+}
+```
+
+Response example
+```json
+{
+  "user": "john"
+  "ts": 1552475073,
+  "cumulative_distance": 5560
+  "cumulative_time":  133910
+}
+```
+You only need to maintain current user's cumulative distance and time count.
+You don't need to care about distance and time units.
+
+2 - **Get user information**
+URL `/users/<username>`
+Example: `/users/john`
+Response:
+```json
+{
+  "user": "john"
+  "ts": 1552479073,
+  "cumulative_distance": 15560
+  "cumulative_time":  193910
+}
+```
+`ts` represents the timestamp of the most recent update. 
+
+3 - **Return the top N  users by certain attributes**
+URL `/users/top/<attribute>?size=N`
+Example: `/users/top/distance?size=3`
+Response:
+```json
+[
+}
+  "user": "john"
+  "ts": 1552479073,
+  "cumulative_distance": 15560
+  "cumulative_time":  193910
+},
+....,
+....
+]
+```
+`size` determines the number of users returned and it is optional. If `size` is invalid the server should return a bad request error. But if it isn't present you should return them all.
+You should only allow `distance` and `time` as route variable.
+
+4 - **Return the top N fastest users**
+Edit the previous endpoint (`/users/top/<attribute>`)  to allow getting the fastest users using  `speed` as route variable.
+Also, you can edit how you store your data or implement all the changes that you consider appropriate.
+Response example:
+```json
+[
+}
+  "user": "john"
+  "ts": 1552479073,
+  "cumulative_distance": 15560,
+  "cumulative_time":  193910,
+  "average_speed":0.08024341189
+},
+....
+]
+```
+**Note**: You don't need to round the speed.
+
+5 - **Find a running partner**
+Also, the company wants to add a feature to allow users to find the best running partners. The best runner partners are the users with a similar speed.
+URL:  `/users/<username>/find-partners?size=N`
+Example response
+```json
+[
+}
+  "user": "jenna"
+  "ts": 1552479073,
+  "cumulative_distance": 15560,
+  "cumulative_time":  193910,
+  "average_speed":0.08024341189
+},
+....
+]
+```
+6 - **Add basic authentication**
+There is going to be a private URL  `/users/<username>/private?token=$TOKEN` to fetch personal data.
+
+The requests using `TOKEN=pq72KttXvPNZWC7zdLANzUsQYwDd5H2s` can access this endpoint and will get a `OK HTTP Status`, the request without a correct token will get an `Unauthorized HTTP Status`.
+
+Probably the company is going to need to add more private endpoints in the future. Try to implement this authentication layer in the more generic way possible and without installing more packages.
+
+## Problem Statement
+1. Your task is to complete the backend application by implementing the API endpoints described above.
+2. Handle accordingly the relevant HTTP codes
+3. Use a simple in-memory store object to maintain state. For this you can use the variable named `STORE` from `views.py` file.
+4. Be sure to complete all TODOs, but know not everything is explicitly tested. The tests that are visible to you are not the only ones, some tests will be tested upon submission and these test results will be visible only to the person scoring your solution.
+5. Solve all the error that you may find in the code
+
+## Running on your local environment
+We recommend the use of a virtualenv but that is up to you.
+We use **nosetests** to execute unit tests.
+Your project will be executed with following command:
+`pip install -e . && nosetests`
+
+Write your code in the existing files to make the tests pass. Look for the TODO comments
+
+Submit your code on the Devskiller platform. Make sure the tests pass there, too, before submitting.
+
+## Good Luck!
